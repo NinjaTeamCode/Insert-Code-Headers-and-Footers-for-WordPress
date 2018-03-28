@@ -1,7 +1,7 @@
 /**
 * Tab
 */
-#nj-header-footer-class label{font-weight: 700;}
+#nj-header-footer-form label{font-weight: 700;}
 .njt-header-footer-admin-tab-controls{
     position: relative;
     z-index: 1;
@@ -32,3 +32,5 @@
     display: block;
 }
 /** ****/
+
+.postbox .description{margin-top: 13px;}

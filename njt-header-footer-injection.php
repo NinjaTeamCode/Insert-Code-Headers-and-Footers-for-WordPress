@@ -87,13 +87,13 @@ class Njt_Header_Footer{
 
 	public function settings_page(){
 
-		include 'include/setting1.php';
+		include 'include/setting2.php';
 
 	}
 
 	public function enqueue_styles() {
 
-		wp_enqueue_style( NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codepen', plugin_dir_url( __FILE__ ) . 'assets/css/codepen.css', array(), NJT_HEADER_FOOTER_VERSION, 'all' );
+		wp_enqueue_style( NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codemirror', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/codemirror.css', array(), NJT_HEADER_FOOTER_VERSION, 'all' );
 
 		wp_enqueue_style( NJT_HEADER_FOOTER_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'assets/css/admin.css', array(), NJT_HEADER_FOOTER_VERSION, 'all' );
 
@@ -103,11 +103,17 @@ class Njt_Header_Footer{
 
 		wp_enqueue_media();
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'emmet', plugin_dir_url( __FILE__ ) . 'assets/js/emmet.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codemirror', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/codemirror.js', array( 'jquery' ), $this->version, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'highlight', plugin_dir_url( __FILE__ ) . 'assets/js/highlight.min.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/xml.js', array( 'jquery' ), $this->version, false );
+		
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/javascript.js', array( 'jquery' ), $this->version, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'admin', plugin_dir_url( __FILE__ ) . 'assets/js/admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'css', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/css.js', array( 'jquery' ), $this->version, false );
+
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'htmlmixed', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/htmlmixed.js', array( 'jquery' ), $this->version, false );
+
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'admin', plugin_dir_url( __FILE__ ) . 'assets/js/app.js', array( 'jquery' ), $this->version, false );
 
 	}
 
