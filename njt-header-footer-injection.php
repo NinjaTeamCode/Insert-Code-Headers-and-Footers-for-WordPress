@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              https://ninjateam.org/
- * @since             1.0.0
+ * @since             1.0.6
  * @package           Nj_Product
  *
  * @wordpress-plugin
@@ -33,7 +33,7 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * 
  */
-define( 'NJT_HEADER_FOOTER_VERSION', '1.0.4' );
+define( 'NJT_HEADER_FOOTER_VERSION', '1.0.6' );
 
 define( 'NJT_HEADER_FOOTER_TEXT_DOMAIN', 'njt-header-footer' );
 
@@ -103,17 +103,17 @@ class Njt_Header_Footer{
 
 		wp_enqueue_media();
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codemirror', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/codemirror.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codemirror', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/codemirror.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/xml.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/xml.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 		
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/javascript.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/javascript.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'css', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/css.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'css', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/css.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'htmlmixed', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/htmlmixed.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'htmlmixed', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/htmlmixed.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'admin', plugin_dir_url( __FILE__ ) . 'assets/js/app.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'admin', plugin_dir_url( __FILE__ ) . 'assets/js/app.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
 	}
 
@@ -137,7 +137,7 @@ class Njt_Header_Footer{
 
 		$meta = get_option( 'njt_hf_css' );
 
-		echo $meta;
+		echo "<style type=\"text/css\">{$meta}</style>" ;
 
 	}
 
