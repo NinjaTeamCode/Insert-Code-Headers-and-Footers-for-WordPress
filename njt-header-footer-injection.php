@@ -33,7 +33,7 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * 
  */
-define( 'NJT_HEADER_FOOTER_VERSION', '1.0.2' );
+define( 'NJT_HEADER_FOOTER_VERSION', '1.0.4' );
 
 define( 'NJT_HEADER_FOOTER_TEXT_DOMAIN', 'njt-header-footer' );
 

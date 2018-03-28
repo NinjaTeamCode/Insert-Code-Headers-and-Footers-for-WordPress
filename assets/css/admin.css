@@ -33,4 +33,6 @@
 }
 /** ****/
 
-.postbox .description{margin-top: 13px;}
+.postbox .description{margin-top: 13px; margin-left: 15px;}
+.njt-hf #poststuff .inside{padding-left: 0; margin-top: 0;}
+.CodeMirror{border-bottom: 1px solid #eee;}
