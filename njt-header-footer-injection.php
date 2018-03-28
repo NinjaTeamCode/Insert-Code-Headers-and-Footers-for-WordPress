@@ -87,7 +87,7 @@ class Njt_Header_Footer{
 
 	public function settings_page(){
 
-		include 'include/setting2.php';
+		include 'view/setting.php';
 
 	}
 
