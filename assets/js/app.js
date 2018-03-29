@@ -17,16 +17,17 @@
 			});
 	    }
 	    if($('.njt_hf_css').length){
-	    	CodeMirror.fromTextArea(document.getElementById("njt_hf_css"), {
-			lineNumbers: true,
-	        extraKeys: {"Ctrl-Space": "autocomplete"},
-	        mode: "text/x-scss"
-	      });
+	    	$('.njt_hf_css').each(function(i, block) {
+	    		CodeMirror.fromTextArea(block, {
+					lineNumbers: true,
+			        extraKeys: {"Ctrl-Space": "autocomplete"},
+			        mode: "text/x-scss"
+			     });
+
+	    	});	    	
 
 	    }
 		
-		
-
 	});
 
 

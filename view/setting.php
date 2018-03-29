@@ -37,7 +37,7 @@
 					<div class="postbox">
 			 			<h3 class="hndle"><?php _e('Custom CSS', NJT_HEADER_FOOTER_TEXT_DOMAIN); ?></h3>
 			 			<div class="inside">		
-							<textarea name="njt_hf_css" id="njt_hf_css" class="editor allow-tabs"><?php echo get_option('njt_hf_css');?></textarea>
+							<textarea name="njt_hf_css" id="njt_hf_css" class="editor allow-tabs njt_hf_css"><?php echo get_option('njt_hf_css');?></textarea>
 							<p class="description"><?php _e('The scripts will be printed in the &lt;head&gt; section', NJT_HEADER_FOOTER_TEXT_DOMAIN);?></p>
 						</div>
 			 		</div>		 		
