@@ -5,7 +5,7 @@
 	<div id="poststuff">
 		<div id="post-body" class="metabox-holder columns-2">
 			<div id="post-body-content">
-				<form  action="options.php" method="post" id="nj-header-footer-form">
+				<form  action="options.php" method="POST" id="nj-header-footer-form">
 					<?php
 						settings_fields( 'njt-header-footer-settings-group' );
 						do_settings_sections( 'njt-header-footer-settings-group' );

@@ -105,7 +105,7 @@ class Njt_Header_Footer{
 
 		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'codemirror', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/codemirror.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
-		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/xml.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
+		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'xml', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/xml.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 		
 		wp_enqueue_script(NJT_HEADER_FOOTER_TEXT_DOMAIN . 'javascript', plugin_dir_url( __FILE__ ) . 'assets/lib/codemirror/javascript.js', array( 'jquery' ), NJT_HEADER_FOOTER_VERSION, false );
 
