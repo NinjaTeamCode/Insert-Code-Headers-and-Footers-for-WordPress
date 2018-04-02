@@ -33,6 +33,7 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * 
  */
+
 define( 'NJT_HEADER_FOOTER_VERSION', '1.0.8' );
 
 define( 'NJT_HEADER_FOOTER_TEXT_DOMAIN', 'njt-header-footer' );
@@ -57,6 +58,10 @@ class Njt_Header_Footer{
 		add_action( 'wp_head', array( $this, 'front_css' ) );
 
 		add_action( 'wp_footer', array( $this, 'front_footer' ) );
+
+		require_once plugin_dir_path( __FILE__ ) . 'include/njt-header-footer-injection-activator.php';	
+
+		register_activation_hook( __FILE__, array('Njt_Header_Footer_Injection_Activator', 'active') );
 
 	}
 
@@ -146,6 +151,8 @@ class Njt_Header_Footer{
 		return __(NJT_HEADER_FOOTER_DISPLAY_NAME, NJT_HEADER_FOOTER_TEXT_DOMAIN);
 
 	}
+
+
 
 }
 
