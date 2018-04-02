@@ -27,6 +27,17 @@
 	    	});	    	
 
 	    }
+
+	    var $njt_hfi_deactivateLink = $('#the-list [data-slug=header-footer-injection] .deactivate > a');
+
+	 //     $njt_hfi_deactivateLink.click(function (e) {
+
+		// 	e.preventDefault();
+
+		// 	alert();
+		// 	// showModal();
+
+		// });
 		
 	});
 
